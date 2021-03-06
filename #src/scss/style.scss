@@ -1,0 +1,1144 @@
+// ШРИФТИ>==================================================================================
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+// ШРИФТИ>==================================================================================
+// Підключення файлів стилів сторінок та елементів>=========================================
+@import "_header.scss";
+@import "_footer.scss";
+@import "_ui.scss";
+@import "mixin.scss";
+@import "null.scss";
+@import "slider.scss";
+// Підключення файлів стилів сторінок та елементів>=========================================
+// перемінні>===============================================================================
+$minwidth: 320px;
+// перемінні>===============================================================================
+
+// Загальні параметри>======================================================================
+html,
+body {
+	font-family: "Roboto", sans-serif;
+}
+// Загальні параметри>======================================================================
+
+// Оболочка>================================================================================
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+}
+// Оболочка>================================================================================
+
+// ОСНОВНА СІТКА>===========================================================================
+.container {
+	width: calc(100vw - 30px);
+	max-width: 1040px;
+	margin: 0px auto;
+	position: relative;
+}
+// ОСНОВНА СІТКА>===========================================================================
+
+.firstscreen {
+	position: relative;
+	&__row {
+		display: flex;
+	}
+	&__bg {
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+.column {
+	display: flex;
+	flex-direction: column;
+	&_content {
+		flex: 0 1 53.3%;
+		margin-right: 41px;
+	}
+
+	&_img {
+		flex: 0 1 45%;
+		position: relative;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__title {
+		font-size: 50px;
+		line-height: 64px;
+		letter-spacing: 0.31px;
+		color: #32404d;
+		padding: 37px 11px 21px 0px;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.15px;
+		color: #023135;
+		padding-bottom: 60px;
+	}
+}
+.form {
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 60px;
+		width: 200px;
+		background: #007a5c;
+		border-radius: 30px;
+		font-size: 16px;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: 0.15px;
+		color: #ffffff;
+	}
+}
+// Основний блок>===========================================================================
+.lesson {
+	padding: 40px 0px 60px 0px;
+	&__row {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		font-size: 10px;
+		line-height: 16px;
+		text-align: center;
+		letter-spacing: 0.67px;
+		text-transform: uppercase;
+		color: #637381;
+		width: 100%;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+}
+.button-wrapper {
+	display: flex;
+	justify-content: space-between;
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 0.15px;
+		color: #007a5c;
+		border: 1px solid #007a5c;
+		border-radius: 24px;
+		padding: 0 15px;
+		height: 36px;
+		transition: all 0.4s ease;
+		&:hover {
+				background-color: #007a5c;
+				color: #fff;
+				-webkit-box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
+-moz-box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
+box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
+
+			}
+	}
+}
+// Основний блок>===========================================================================
+.phone {
+	padding: 29px 0 0 0;
+	&__row {
+		display: flex;
+	}
+
+	&__title {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		padding: 0px 0px 65px 0px;
+		span {
+			font-size: 32px;
+			line-height: 44px;
+			text-align: center;
+			letter-spacing: 0.2px;
+			color: #023135;
+			max-width: 314px;
+			width: 100%;
+			&:nth-child(2) {
+				max-width: 304px;
+			}
+			&:nth-child(3) {
+				max-width: 304px;
+			}
+		}
+	}
+
+	&__column {
+		flex: 0 1 33.3333%;
+		position: relative;
+	}
+}
+.block {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 100%;
+	max-width: 260px;
+	background: #ffffff;
+	border: 1px solid #ebf4ff;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 7px rgba(222, 234, 249, 0.59);
+	border-radius: 24px;
+
+	&_one {
+		padding: 16px 22px 45px 21px;
+		top: 0%;
+		left: 10%;
+	}
+	&_two {
+		padding: 16px 39px 21px 39px;
+		top: 16.5%;
+		left: -4%;
+	}
+	&_three {
+		padding: 16px 29px 21px 30px;
+		top: 49%;
+		left: 17%;
+	}
+	&_number {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		align-self: center;
+		background: #32404d;
+		width: 36px;
+		height: 36px;
+		border-radius: 18px;
+		font-size: 14px;
+		line-height: 16px;
+		color: #ffffff;
+	}
+	&_text {
+		display: flex;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.15px;
+		color: #023135;
+		padding-top: 24px;
+		&_three {
+		}
+		&_two {
+		}
+	}
+}
+.arrow_img {
+	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	&_one {
+		top: 26.6%;
+		left: 57.3%;
+	}
+	&_two {
+		justify-content: flex-start;
+		top: 40.5%;
+		left: -2%;
+	}
+	&_three {
+		top: 74%;
+		left: 71%;
+	}
+}
+.column-center {
+	position: relative;
+	padding-top: 19px;
+	left: 10px;
+	.phone-img img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+// Основний блок>===========================================================================
+.privilege {
+	padding-top: 25px;
+	&__title {
+		display: flex;
+		justify-content: center;
+		font-size: 24px;
+		line-height: 32px;
+		text-align: center;
+		letter-spacing: 0.15px;
+		color: #023135;
+		padding-bottom: 40px;
+	}
+
+	&__row {
+		display: flex;
+		padding: 0 30px 95px 30px;
+	}
+
+	&__column {
+		flex: 0 1 33.333%;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+}
+
+.block-p {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	max-width: 247px;
+	width: 100%;
+	&__img {
+	}
+
+	&__title {
+		font-size: 20px;
+		line-height: 28px;
+		text-align: center;
+		letter-spacing: 0.15px;
+		color: #023135;
+		padding: 21px 0 12px 0;
+	}
+
+	&__text {
+		font-size: 9px;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: 0.15px;
+		color: #000000;
+		&_l {
+			padding: 0 4.5px 0px 5.5px;
+		}
+		&_r {
+			padding: 0 10.5px 0px 11.5px;
+		}
+	}
+}
+// Основний блок>===========================================================================
+.checklist {
+	position: relative;
+	background-image: url(/img/checklistBG.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	padding-top: 55px;
+	padding-bottom: 110px;
+	&__title {
+		font-size: 32px;
+		line-height: 49px;
+		text-align: center;
+		letter-spacing: 0.2px;
+		color: #023135;
+		margin: 0 auto;
+		span {
+			padding: 0px 15px;
+			&:nth-child(3) {
+				padding: 0 37px;
+			}
+			&:nth-child(4) {
+				padding: 0 7px;
+			}
+		}
+	}
+}
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 45px 0 0 0;
+
+	&__item {
+		position: relative;
+		width: 100%;
+		padding-left: 20px;
+		max-width: 280px;
+		justify-content: space-between;
+		margin: 0 80px 0 58px;
+		padding: 8px 0 0 0;
+		p {
+			font-size: 16px;
+			line-height: 24px;
+			letter-spacing: 0.15px;
+			color: #023135;
+			padding-left: 34px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			left: 1px;
+			top: 11px;
+			background-image: url(/img/checkedPoint.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+}
+// Основний блок>===========================================================================
+.video {
+	padding: 99px 0 100px 0;
+	&__title {
+		font-size: 32px;
+		line-height: 44px;
+		text-align: center;
+		letter-spacing: 0.2px;
+		color: #023135;
+		padding-right: 41px;
+		span {
+			font-size: 32px;
+			line-height: 44px;
+			text-align: center;
+			letter-spacing: 0.2px;
+			color: #007a5c;
+			padding-right: 55px;
+		}
+	}
+
+	&__text {
+		text-align: center;
+		padding: 13px 0 48px 0;
+		font-size: 16px;
+		line-height: 24px;
+		text-align: center;
+		letter-spacing: 0.15px;
+		color: #909eab;
+	}
+
+	&__row {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		padding: 0 30px;
+	}
+}
+.column {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex: 0 1 33.333%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	&__title-v {
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.15px;
+		color: #023135;
+		margin: 0;
+		padding: 0 10px 20px 0;
+	}
+	&__button {
+		position: absolute;
+		top: 48%;
+		left: 45%;
+		width: 48px;
+		height: 48px;
+		background: #007a5c;
+		background-image: url(/img/button-arrow.png);
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+// Основний блок>===========================================================================
+.plan {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding-top: 43px;
+	&__bg {
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			object-fit: cover;
+		}
+	}
+	&__title {
+		font-size: 40px;
+		line-height: 52px;
+		text-align: center;
+		letter-spacing: 0.25px;
+		color: #023135;
+		padding-bottom: 24px;
+	}
+
+
+}
+.plan-block {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: #ffffff;
+	border: 1px solid #ebf4ff;
+	box-sizing: border-box;
+	box-shadow: 0px 2px 25px rgba(76, 106, 170, 0.22);
+	border-radius: 20px;
+	padding: 33px 0 25px 0;
+	width: 100%;
+	max-width: 373px;
+	&__title {
+		padding-bottom: 24px;
+		font-size: 20px;
+		line-height: 28px;
+		text-align: center;
+		letter-spacing: 0.15px;
+		color: #023135;
+	}
+
+	&__list {
+		font-size: 16px;
+		line-height: 19px;
+		letter-spacing: 0.15px;
+		color: #023135;
+		padding: 0 15px;
+		li {
+			text-align: start;
+			padding: 16px 0 0 0;
+			&:first-child {
+				padding: 0;
+			}
+			&:last-child {
+				padding-bottom: 30px;
+			}
+		}
+	}
+	&__form {
+		display: flex;
+		justify-content: center;
+		padding: 0 23px;
+	}
+}
+.form {
+	&__button-plan {
+		min-width: 297px;
+		min-height: 44px;
+	}
+}
+// Основний блок>===========================================================================
+.FAQ {
+	display: flex;
+	flex-direction: column;
+	padding-top: 30px;
+	padding-bottom: 124px;
+	&__title {
+		font-size: 32px;
+		line-height: 44px;
+		text-align: center;
+		letter-spacing: 0.2px;
+		color: #023135;
+		text-align: center;
+		padding-bottom: 36px;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		max-width: 440px;
+		margin: 0 auto;
+		li {
+			position: relative;
+		}
+		li:nth-child(2) {
+			margin: 24px 0;
+		}
+		a::before {
+			content: "";
+			position: absolute;
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			left: 1px;
+			top: 3px;
+			background-image: url(/img/list_plus.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		a {
+			font-size: 16px;
+			line-height: 24px;
+			letter-spacing: 0.15px;
+			color: #023135;
+			padding-left: 36px;
+		}
+	}
+}
+// Основний блок>===========================================================================
+@media (max-width: 910px) {
+	.header {
+		padding: 13px 0 25px 0;
+	}
+	.column {
+		&_content {
+			margin-right: 20px;
+		}
+		&__title {
+			font-size: 44px;
+			line-height: 56px;
+			padding: 15px 0px 20px 0;
+		}
+		&__text {
+			padding-bottom: 20px;
+		}
+		.form {
+			padding-bottom: 20px;
+		}
+	}
+	.lesson {
+		padding: 30px 0 30px 0;
+		.button-wrapper {
+			flex-wrap: wrap;
+			width: 49%;
+			margin: 0 auto;
+			&__item {
+				width: 100px;
+				margin: 10px 5px;
+			}
+		}
+	}
+	.phone {
+		padding-top: 15px;
+		&__title {
+			padding-bottom: 30px;
+			span {
+				font-size: 27px;
+			}
+		}
+		.column-center {
+			padding-top: 10px;
+		}
+		.block {
+			padding: 5px;
+			&_number {
+				width: 30px;
+				height: 30px;
+			}
+			&_text {
+				padding-top: 12px;
+				line-height: 16px;
+			}
+		}
+		.arrow_img {
+			width: 100px;
+			height: 50px;
+			&_one {
+				top: 26.6%;
+				left: 60.3%;
+			}
+			&_two {
+				justify-content: flex-start;
+				top: 38.5%;
+				left: -7%;
+			}
+			&_three {
+				top: 74%;
+				left: 66%;
+			}
+		}
+		.phone-img {
+			max-width: 340px;
+			max-height: 570px;
+		}
+	}
+	.privilege {
+		&__title {
+			padding-bottom: 30px;
+		}
+		&__row {
+			padding: 0 20px 45px 20px;
+		}
+	}
+	.checklist {
+		padding: 20px 0 20px 0;
+		.list {
+			padding-top: 20px;
+		}
+	}
+	.video {
+		padding: 40px 0 40px 0;
+		&__title {
+			padding: 0 20px;
+			span {
+				padding-right: 30px;
+			}
+		}
+		&__text {
+			padding: 13px 0 30px 0;
+		}
+		&__row {
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 0;
+			.column {
+				padding-top: 15px;
+				margin: 0 20px;
+				&__button {
+					top: 50%;
+					left: 40%;
+				}
+				&__title-v {
+					padding: 0 0 10px 0;
+				}
+			}
+		}
+	}
+	.plan {
+		padding-top: 20px;
+		&__row {
+			padding: 25px 20px 35px 20px;
+		}
+	}
+	.FAQ {
+		padding-bottom: 40px;
+		&__title {
+			padding-bottom: 20px;
+		}
+		&__list li:nth-child(2) {
+			margin: 12px 0;
+		}
+	}
+}
+@media (max-width: 767.8px) {
+	.header {
+		padding: 7px 0 15px 0;
+		.menu__list {
+			max-width: 230px;
+		}
+	}
+	.firstscreen {
+		.column {
+			&_content {
+				margin: 10px 10px 0 0;
+			}
+			&__title {
+				font-size: 35px;
+				line-height: 35px;
+				padding: 10px 0px 15px 0;
+			}
+			&__text {
+				font-size: 13px;
+				padding-bottom: 15px;
+			}
+		}
+		.form {
+			padding-bottom: 20px;
+			font-size: 15px;
+			&__button {
+				width: 150px;
+				height: 40px;
+				font-size: 15px;
+			}
+		}
+		.column_img {
+			// display: none;
+			img {
+				object-fit: cover;
+				object-position: 0%;
+			}
+		}
+	}
+	.lesson {
+		padding: 20px 0 20px 0;
+		.button-wrapper {
+			max-width: 430px;
+			flex-wrap: wrap;
+			width: 71%;
+			margin: 0 auto;
+			&__item {
+				width: 100px;
+				margin: 10px 5px;
+			}
+		}
+	}
+	.phone {
+		padding-top: 15px;
+		&__title {
+			padding-bottom: 30px;
+			span {
+				font-size: 25px;
+				line-height: 23px;
+			}
+		}
+		.column-center {
+			padding-top: 10px;
+		}
+		.block {
+			padding: 5px;
+			&_number {
+				font-size: 10px;
+				width: 20px;
+				height: 20px;
+			}
+			&_text {
+				font-size: 13px;
+				padding-top: 5px;
+				line-height: 13px;
+			}
+		}
+		.arrow_img {
+			width: 80px;
+			height: 35px;
+			&_one {
+				top: 27.6%;
+				left: 52.3%;
+			}
+			&_two {
+				justify-content: flex-start;
+				top: 40.5%;
+				left: -7%;
+			}
+			&_three {
+				top: 75%;
+				left: 55%;
+			}
+		}
+		.phone-img {
+			max-width: 250px;
+			max-height: 420px;
+		}
+	}
+	.privilege {
+		&__column {
+			margin: 0 15px;
+		}
+		&__title {
+			padding-bottom: 30px;
+		}
+		&__row {
+			padding: 0 10px 25px 10px;
+		}
+		.block-p {
+			&__title {
+				padding: 12px 0 7px 0;
+			}
+			&__text {
+				padding: 0;
+			}
+		}
+	}
+	.checklist {
+		padding: 20px 0 20px 0;
+		&__title {
+			font-size: 26px;
+			line-height: 32px;
+		}
+		.list {
+			padding-top: 20px;
+		}
+	}
+	.video {
+		padding: 40px 0 40px 0;
+		&__title {
+			padding: 0 20px;
+			span {
+				padding-right: 30px;
+			}
+		}
+		&__text {
+			padding: 13px 0 30px 0;
+		}
+		&__row {
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 0;
+			.column {
+				padding-top: 15px;
+				margin: 0 20px;
+				&__button {
+					top: 50%;
+					left: 40%;
+				}
+				&__title-v {
+					padding: 0 0 10px 0;
+				}
+			}
+		}
+	}
+	.plan {
+		padding-top: 20px;
+		&__row {
+			padding: 25px 20px 35px 20px;
+		}
+	}
+	.FAQ {
+		padding-bottom: 40px;
+		&__title {
+			padding-bottom: 20px;
+		}
+		&__list li:nth-child(2) {
+			margin: 12px 0;
+		}
+	}
+	.menu-footer {
+		justify-content: space-between;
+		max-width: 250px;
+		a {
+			font-size: 11px;
+		}
+		li {
+			&:nth-child(2){
+			padding: 0;
+			}
+			&:nth-child(3){
+				padding-left: 0;
+			}
+			&:nth-child(1){
+				padding-right: 0;
+			}
+	}
+}
+}
+@media (max-width: 500px) {
+	.header {
+		padding: 7px 0 15px 0;
+		&__logo {
+			width: 70px;
+			height: 35px;
+		}
+		.menu__list {
+			max-width: 200px;
+		}
+	}
+	.firstscreen {
+		&__row {
+			justify-content: center;
+			align-items: center;
+		}
+		.column {
+			&_content {
+				margin: 10px 10px 0 0;
+			}
+			&__title {		
+				min-width: 290px;		
+				font-size: 36px;
+				line-height: 32px;
+				padding: 0px 0px 10px 0;
+			}
+			&__text {
+				font-size: 13px;
+				padding-bottom: 15px;
+			}
+		}
+
+		.column_img {
+			display: none;
+		}
+	}
+	.lesson {
+		padding: 15px 0 15px 0;
+		.button-wrapper {
+			max-width: 290px;
+			flex-wrap: wrap;
+			width: 90%;
+			margin: 0 auto;
+			&__item {
+				width: 100px;
+				margin: 6px 5px;
+			}
+		}
+	}
+	.phone {
+		padding-top: 15px;
+		&__title {
+			padding-bottom: 30px;
+			span {
+				font-size: 20px;
+				line-height: 20px;
+			}
+		}
+		.column-center {
+			padding-top: 5px;
+		}
+		.block {
+			padding: 3px;
+			background-color: rgb(230, 230, 230);
+			&_two {
+				top: 7%;
+			}
+			&_one {
+				top: -6%;
+			}
+			&_three {
+				top: 45%;
+			}
+			&_number {
+				font-size: 8px;
+				width: 16px;
+				height: 16px;
+			}
+			&_text {
+				font-size: 11px;
+				padding-top: 3px;
+				line-height: 9px;
+			}
+		}
+		.arrow_img {
+			width: 50px;
+			height: 11px;
+			&_one {
+				top: 27.6%;
+				left: 52.3%;
+			}
+			&_two {
+				justify-content: flex-start;
+				top: 40.5%;
+				left: -7%;
+			}
+			&_three {
+				top: 75%;
+				left: 55%;
+			}
+		}
+		.phone-img {
+			max-width: 160px;
+			max-height: 265px;
+		}
+	}
+	.privilege {
+		padding-top: 15px;
+		&__column {
+			margin: 0 15px;
+		}
+		&__title {
+			padding-bottom: 15px;
+		}
+		&__row {
+			padding: 0 0px 15px 0px;
+			display: flex;
+			flex-direction: column;
+		}
+		.block-p {
+			padding-top: 10px;
+			&__title {
+				padding: 8px 0 7px 0;
+			}
+			&__text {
+				padding: 0;
+			}
+		}
+	}
+	.checklist {
+		padding: 15px 0 15px 0;
+		&__title {
+			font-size: 21px;
+			line-height: 22px;
+			span:nth-child(3),
+			span:nth-child(2),
+			span:nth-child(4) {
+				padding: 0;
+			}
+		}
+		.list {
+			padding-top: 10px;
+			&__item {
+				padding-top: 7px;
+				margin: 0;
+				max-width: 245px;
+			}
+		}
+	}
+	.video {
+		padding: 15px 0 15px 0;
+		&__title {
+			padding: 0;
+			font-size: 24px;
+			line-height: 30px;
+			span {
+				padding-right: 15px;
+				font-size: 28px;
+			}
+		}
+		&__text {
+			padding: 10px 0 15px 0;
+		}
+		&__row {
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 0;
+			.column {
+				padding-top: 15px;
+				margin: 0 20px;
+				&__button {
+					top: 50%;
+					left: 40%;
+				}
+				&__title-v {
+					padding: 0 0 10px 0;
+				}
+			}
+		}
+	}
+	.plan {
+		padding-top: 15px;
+		&__title {
+			font-size: 28px;
+			padding-bottom: 15px;
+		}
+		.plan-block {
+			.form__button-plan {
+				min-width: 230px;
+				height: 44px;
+			}
+			}
+		
+	}
+	.FAQ {
+		padding-bottom: 20px;
+		&__title {
+			padding-bottom: 20px;
+		}
+		&__list li:nth-child(2) {
+			margin: 12px 0;
+		}
+	}
+	.footer {
+		padding: 50px 0 15px 0;
+		&__row {
+			flex-direction: column;
+		}
+		.logo img {
+			left: 10%;
+		}
+	.menu-footer {
+		position: absolute;
+		left: 10%;
+		top: 25%;
+		flex-direction: column;
+		align-items: flex-start;
+		a {
+			font-size: 11px;
+			
+		}
+		li {
+			&:nth-child(2){
+			padding: 3px 0;
+			}
+			&:nth-child(3){
+				padding-left: 0;
+			}
+			&:nth-child(1){
+				padding-right: 0;
+			}
+	}
+}
+}
+}
