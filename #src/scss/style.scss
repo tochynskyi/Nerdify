@@ -329,7 +329,8 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 // Основний блок>===========================================================================
 .checklist {
 	position: relative;
-	background-image: url(/img/checklistBG.png);
+	// background-image: url(/img/checklistBG.png);
+	background-image: url(img/checklistBG.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
@@ -569,7 +570,8 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 			height: 18px;
 			left: 1px;
 			top: 3px;
-			background-image: url(/img/list_plus.png);
+			background-image: url(img/list_plus.png);
+			// background-image: url(/img/list_plus.png);
 			background-repeat: no-repeat;
 			background-size: contain;
 		}

@@ -282,15 +282,15 @@ h6 {
 
 .slider .slick-arrow.slick-prev {
   left: 0%;
-  -webkit-mask-image: url("/img/slider-arrow-left.svg");
-          mask-image: url("/img/slider-arrow-left.svg");
+  -webkit-mask-image: url("img/slider-arrow-left.svg");
+          mask-image: url("img/slider-arrow-left.svg");
   background-color: #007a5c;
 }
 
 .slider .slick-arrow.slick-next {
   right: 0%;
-  -webkit-mask-image: url("/img/slider-arrow-right.svg");
-          mask-image: url("/img/slider-arrow-right.svg");
+  -webkit-mask-image: url("img/slider-arrow-right.svg");
+          mask-image: url("img/slider-arrow-right.svg");
   background-color: #007a5c;
 }
 
@@ -728,7 +728,7 @@ body {
 
 .checklist {
   position: relative;
-  background-image: url(/img/checklistBG.png);
+  background-image: url(img/checklistBG.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -1044,7 +1044,7 @@ body {
   height: 18px;
   left: 1px;
   top: 3px;
-  background-image: url(/img/list_plus.png);
+  background-image: url(img/list_plus.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -1783,10 +1783,10 @@ body {
   }
 }
 
-.webp .checklist{ background-image: url(/img/checklistBG.webp); }
+.webp .checklist{ background-image: url(img/checklistBG.webp); }
 
 .webp .list__item::before{ background-image: url(/img/checkedPoint.webp); }
 
 .webp .column__button{ background-image: url(/img/button-arrow.webp); }
 
-.webp .FAQ__list a::before{ background-image: url(/img/list_plus.webp); }
+.webp .FAQ__list a::before{ background-image: url(img/list_plus.webp); }
