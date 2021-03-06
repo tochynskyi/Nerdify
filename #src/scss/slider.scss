@@ -22,14 +22,14 @@
 	}
 	.slick-arrow.slick-prev{
 		left: 0%;
-		// mask-image: url('/img/slider-arrow-left.svg');
-		mask-image: url('img/slider-arrow-left.svg');
+		mask-image: url('/img/slider-arrow-left.svg');
+		
 		background-color: #007a5c;
 	}
 	.slick-arrow.slick-next{
 		right: 0%;
-		// mask-image: url('/img/slider-arrow-right.svg');
-		mask-image: url('img/slider-arrow-right.svg');
+		mask-image: url('/img/slider-arrow-right.svg');
+
 		background-color: #007a5c;
 	}
 }
