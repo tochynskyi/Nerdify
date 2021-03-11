@@ -19,28 +19,20 @@
 			top: 0;
 			width: 112px;
 		}
-		&__text {
-			width: 90.99px;
-			height: 9.12px;
-			position: absolute;
-			top: 40px;
-		}
 	}
 }
 
 .menu__list {
 	display: flex;
 	list-style: none;
+	text-align: center;
 	width: 100%;
 	max-width: 290px;
-	max-height: 10px;
 	justify-content: space-between;
-	&__link {
+	a {
+		color: #023135;
 		font-size: 14px;
 		line-height: 20px;
-		text-align: center;
 		letter-spacing: 0.15px;
-		color: #023135;
-		text-decoration: none;
 	}
 }
