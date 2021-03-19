@@ -10,21 +10,22 @@
 
 <body>
 	<div class="wrapper">
+
 		<section class="firstscreen">
 			@@include('_header.html')
 			<div class="container">
 				<div class="firstscreen__row">
-					<div class="firstscreen__column column_content">
-						<h1 class="column__title">Get a custom-made video solution for your study problem</h1>
-						<p class="column__text">An expert tutor will record a step by step<br>explanation for your request</p>
+					<div class="firstscreen__column">
+						<h1 class="firstscreen__title">Get a custom-made video solution for your study problem</h1>
+						<p class="firstscreen__text">An expert tutor will record a step by step<br>explanation for your
+							request</p>
 						<form action="#" class="form">
 							<button type="submit" class="form__button">Subscribe Now</button>
 						</form>
 					</div>
-					<div class="firstscreen__column column_img">
+					<div class="firstscreen__img">
 						<img src="img/phone1.png" alt="">
 					</div>
-
 				</div>
 			</div>
 			<div class="firstscreen__bg"><img src="img/bg.png" alt=""></div>
@@ -50,9 +51,35 @@
 		</section>
 		<section class="phone">
 			<div class="container">
-				<div class="phone__title">As simple as TikTok <span></span> and cheaper than <span></span> a tutoring session
+				<div class="phone__title">As simple as TikTok <span></span> and cheaper than <span></span> a tutoring
+					session
 				</div>
 				<div class="phone__row">
+					<div class="block block__one">
+						<div class="block__number"><span>1</span></div>
+						<div class="block__text">Send your problem: take a photo, copy & paste instructions or attach files.
+						</div>
+					</div>
+					<div class="arrow"><img src="img/arrow1.png" alt=""></div>
+					<div class="block block__three">
+						<div class="block__number"><span>3</span></div>
+						<div class="block__text">Chat with your tutor for the next 24 hours to clarify any
+							questions.</div>
+
+					</div>
+					<div class="arrow"><img src="img/arrow3.png" alt=""></div>
+					<div class="block__img">
+						<img src="img/phone2.png" alt="">
+					</div>
+
+					<div class="block block__two">
+						<div class="block__number"><span>2</span></div>
+						<div class="block__text ">Get a video with a solution explained in details within an
+							hour!</div>
+					</div>
+					<div class="arrow"><img src="img/arrow2.png" alt=""></div>
+				</div>
+				<!-- <div class="phone__row">
 					<div class="phone__column column-left">
 						<div class="block block_one">
 							<div class="block_number"><span>1</span></div>
@@ -78,7 +105,7 @@
 						</div>
 						<div class="arrow_img arrow_img_two"><img src="img/arrow2.png" alt=""></div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</section>
 		<section class="privilege">
@@ -89,7 +116,8 @@
 						<div class="block-p">
 							<div class="block-p__img"><img src="img/previlage2.svg" alt=""></div>
 							<h3 class="block-p__title">Faster</h3>
-							<p class="block-p__text block-p__text_l">No need to schedule and wait for live sessions with tutors.</p>
+							<p class="block-p__text block-p__text_l">No need to schedule and wait for live sessions with
+								tutors.</p>
 						</div>
 					</div>
 					<div class="privilege__column">
@@ -103,7 +131,8 @@
 						<div class="block-p">
 							<div class="block-p__img"><img src="img/previlage3.svg" alt=""></div>
 							<h3 class="block-p__title">At hand</h3>
-							<p class="block-p__text block-p__text_r">Get back to the video any time and chat with a tutor on the go.</p>
+							<p class="block-p__text block-p__text_r">Get back to the video any time and chat with a tutor on
+								the go.</p>
 						</div>
 					</div>
 				</div>
@@ -111,7 +140,8 @@
 		</section>
 		<section class="checklist">
 			<div class="container">
-				<h2 class="checklist__title">Submit as many problems as you need. <br class="checklist__br"> <span></span> Your tutor will record <span></span> a separate explanation <span></span> for each!
+				<h2 class="checklist__title">Submit as many problems as you need. <br class="checklist__br"> <span></span>
+					Your tutor will record <span></span> a separate explanation <span></span> for each!
 				</h2>
 				<ul class="list">
 					<li class="list__item">
@@ -138,26 +168,26 @@
 					<div class="column">
 						<h6 class="column__title-v">Statistics</h6>
 						<div class="column__video video-btn"><img src="img/video1.png" alt="">
-						<button type="button" class="video-btn__button"></button>
-					</div>
+							<button type="button" class="video-btn__button"></button>
+						</div>
 					</div>
 					<div class="column">
 						<h6 class="column__title-v">Chemistry</h6>
 						<div class="column__video video-btn"><img src="img/video2.png" alt="">
-						<button type="button" class="video-btn__button"></button>
+							<button type="button" class="video-btn__button"></button>
+						</div>
 					</div>
-				</div>
 					<div class="column">
 						<h6 class="column__title-v">Economics</h6>
 						<div class="column__video video-btn"><img src="img/video3.png" alt="">
-						<button type="button" class="video-btn__button"></button>
+							<button type="button" class="video-btn__button"></button>
+						</div>
+
 					</div>
-				
-			</div>
 		</section>
 		<section class="plan">
 			<div class="plan__bg"><img src="img/bubble_bg.png" alt=""></div>
-			<div class="container">
+			<div class="container slider-container">
 				<h2 class="plan__title">Choose your plan</h2>
 				<div class="slider">
 					<div class="plan-block slider__item">
@@ -200,24 +230,64 @@
 							<button type="submit" class="form__button form__button-plan">Subscribe Now</button>
 						</form>
 					</div>
+					<div class="plan-block slider__item">
+						<div class="plan-block__title">Medium - $50/mo</div>
+						<ul class="plan-block__list">
+							<li>
+								35 problems/mo included
+							</li>
+							<li>
+								Then: $4/problem
+							</li>
+							<li>
+								Private chat with tutor
+							</li>
+							<li>
+								Unlimited access 24/7
+							</li>
+						</ul>
+						<form action="#" class="form plan-block__form">
+							<button type="submit" class="form__button form__button-plan">Subscribe Now</button>
+						</form>
+					</div>
+					<div class="plan-block slider__item">
+						<div class="plan-block__title">Expert - $130/mo</div>
+						<ul class="plan-block__list">
+							<li>
+								35 problems/mo included
+							</li>
+							<li>
+								Then: $4/problem
+							</li>
+							<li>
+								Private chat with tutor
+							</li>
+							<li>
+								Unlimited access 24/7
+							</li>
+						</ul>
+						<form action="#" class="form plan-block__form">
+							<button type="submit" class="form__button form__button-plan">Subscribe Now</button>
+						</form>
+					</div>
 				</div>
 			</div>
-			
+
 		</section>
 		<section class="FAQ">
 			<div class="container">
 				<h2 class="FAQ__title">FAQ</h2>
 				<ul class="FAQ__list">
-				<li class="link"><a href="#">How it works?</a></li>
-				<li class="link"><a href="#">How do I cancel my subscription?</a></li>
-				<li class="link"><a href="#">Can I submit more than 1 problem at once?</a></li>
+					<li class="link"><a href="#">How it works?</a></li>
+					<li class="link"><a href="#">How do I cancel my subscription?</a></li>
+					<li class="link"><a href="#">Can I submit more than 1 problem at once?</a></li>
 				</ul>
 			</div>
 		</section>
-	@@include('_footer.html')
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script src="js/script.min.js"></script>
-	<script src="js/slick.min.js"></script>
+		@@include('_footer.html')
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="js/script.min.js"></script>
+		<script src="js/slick.min.js"></script>
 	</div>
 </body>
 

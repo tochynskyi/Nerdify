@@ -17,6 +17,7 @@ $minwidth: 320px;
 // Загальні параметри>======================================================================
 html,
 body {
+	min-width: 320px;
 	font-family: "Roboto", sans-serif;
 }
 // Загальні параметри>======================================================================
@@ -39,56 +40,61 @@ body {
 
 .firstscreen {
 	position: relative;
-	&__row {
-		display: flex;
-	}
-	&__bg {
-		img {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			z-index: -1;
-			top: 0;
-			left: 0;
-			object-fit: cover;
+	
+		&__row {
+			position: relative;
+			display: flex;
 		}
-	}
-}
-.column {
-	display: flex;
-	flex-direction: column;
-	&_content {
-		flex: 0 1 53.3%;
-		margin-right: 41px;
-	}
-
-	&_img {
-		flex: 0 1 45%;
-		position: relative;
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
+		&__column {
+			display: flex;
+		flex: 0 1 50%;
+			flex-direction: column;
+			padding-bottom: 99px;
 		}
-	}
-
-	&__title {
-		font-size: 50px;
+		&__title {
+			font-size: 50px;
 		line-height: 64px;
 		letter-spacing: 0.31px;
 		color: #32404d;
 		padding: 37px 11px 21px 0px;
-	}
+		z-index: 2;
+		}
 
-	&__text {
-		font-size: 16px;
+		&__text {
+			font-size: 16px;
 		line-height: 24px;
 		letter-spacing: 0.15px;
 		color: #023135;
 		padding-bottom: 60px;
-	}
+		z-index: 2;
+		}
+
+		&__img {	
+			img{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 28%;
+			top: 0;
+			z-index: 1;
+			object-fit: contain;
+		}	
+		}
+
+		&__bg {
+			img {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				top: 0;
+				left: 0;
+				object-fit: cover;
+			}
+		}
 }
 .form {
+	z-index: 2;
 	&__button {
 		display: flex;
 		justify-content: center;
@@ -154,7 +160,11 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 .phone {
 	padding: 29px 0 0 0;
 	&__row {
+		position: relative;
 		display: flex;
+		align-items: flex-start;
+		justify-content: flex-end;
+		height: 759px;
 	}
 
 	&__title {
@@ -174,33 +184,23 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 		}
 	}
 
-	&__column {
-		flex: 0 1 33.3333%;
-		position: relative;
-	}
 }
 .block {
 	display: flex;
 	flex-direction: column;
-	text-align: center;
-	width: 100%;
-	max-width: 260px;
-	background: #ffffff;
-	border: 1px solid #ebf4ff;
+	padding: 16px 23px 16px 23px;
+	width: 260px;
+	background: #FFFFFF;
+	border: 1px solid #EBF4FF;
 	box-sizing: border-box;
 	box-shadow: 0px 4px 7px rgba(222, 234, 249, 0.59);
 	border-radius: 24px;
-	padding: 15px;
-	&_one {
-		margin-top: 20px;
+	&__one {
+		position: absolute;
+		left: 2.7%;
+		height: 193px;
 	}
-	&_two {
-		margin-top: 130px;
-	}
-	&_three {
-		margin: 190px 0 100px 0;
-	}
-	&_number {
+	&__number {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -213,42 +213,53 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 		line-height: 16px;
 		color: #ffffff;
 	}
-	&_text {
+
+	&__text {
 		display: flex;
 		font-size: 16px;
 		line-height: 24px;
 		letter-spacing: 0.15px;
 		color: #023135;
-		padding-top: 24px;
+		padding: 24px 0 0px 0;
+		text-align: center;
+
 	}
-}
-.arrow_img {
-	display: flex;
-	justify-content: flex-end;
-	position: absolute;
-	&_one {
-		top: 26.6%;
-		left: 57.3%;
-	}
-	&_two {
-		justify-content: flex-start;
-		top: 40.5%;
-		left: -2%;
-	}
-	&_three {
-		top: 74%;
-		left: 71%;
-	}
-}
-.column-center {
-	position: relative;
-	padding-top: 19px;
-	left: 10px;
-	.phone-img img {
+	&__three {
 		position: absolute;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+		align-self: flex-end;
+		left: 4.8%;
+   	top: 50.5%
+	}
+
+	&__img {
+		position: absolute;
+		padding: 18px 0 0 0;
+		width: 449px;
+		height: 759px;	
+		left: 51%;
+		transform: translate(-50%,0);
+	}
+
+	&__two {
+		position: absolute;
+		right: 4.6%;
+		top: 16.8%;
+		padding: 16px 39px 16px 39px;
+	}
+}
+.arrow {
+	position: absolute;
+	&:nth-child(2) {
+		left: 16%;
+		top: 27%;
+	}
+	&:nth-child(4) {
+		left: 20.3%;
+   	top: 75.5%;
+	}
+	&:nth-child(7) {
+		right: 15.3%;
+		top: 41.5%;
 	}
 }
 // Основний блок>===========================================================================
@@ -469,11 +480,8 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 	box-sizing: border-box;
 	box-shadow: 0px 2px 25px rgba(76, 106, 170, 0.22);
 	border-radius: 20px;
-	padding: 33px 0 25px 0;
-	width: 100%;
-	max-width: 373px;
+	padding: 33px 15px 25px 15px;
 	margin: 15px 20px;
-	
 	&__title {
 		padding-bottom: 24px;
 		font-size: 20px;
@@ -515,8 +523,8 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 .FAQ {
 	display: flex;
 	flex-direction: column;
-	padding-top: 30px;
-	padding-bottom: 124px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	margin-top: 110px;
 	&__title {
 		font-size: 32px;
@@ -561,26 +569,69 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 	}
 }
 // Основний блок>===========================================================================
-@media (max-width: 910px) {
+@media (max-width: 1000px) {
 	.header {
 		padding: 13px 0 25px 0;
 	}
-	.column {
-		&_content {
-			margin-right: 20px;
-		}
+	.firstscreen {
 		&__title {
-			font-size: 44px;
-			line-height: 56px;
-			padding: 15px 0px 20px 0;
+			padding: 10px 10px 15px 0;
+			font-size: 40px;
 		}
+
 		&__text {
-			padding-bottom: 20px;
+			padding-bottom: 25px;
 		}
-		.form {
-			padding-bottom: 20px;
+}
+	.phone {
+		padding-top: 15px;
+		&__title {
+			padding-bottom: 30px;
+			font-size: 27px;
+			span {
+				display: none;
+			}
+		}
+	&__row {
+		height: 500px;
+	}
+	.block__one {
+		left: 0;
+	}
+	.block__three {
+		top: 50%;
+		left: 0;
+	}
+	.block__two {
+		top: 0;
+		right: 0;
+	}
+	.block__img{
+		padding: 0;
+		width: 275px;
+		height: 470px;
+		img {
+			width: 100%;
+			height: 100%;
 		}
 	}
+	.arrow {
+		display: none;
+		position: absolute;
+		&:nth-child(2) {
+			left: 16%;
+			top: 27%;
+		}
+		&:nth-child(4) {
+			left: 20.3%;
+			top: 75.5%;
+		}
+		&:nth-child(7) {
+			right: 15.3%;
+			top: 41.5%;
+		}
+	}
+}
 	.lesson {
 		padding: 30px 0 30px 0;
 		.button-wrapper {
@@ -591,54 +642,6 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 				width: 100px;
 				margin: 10px 5px;
 			}
-		}
-	}
-	.phone {
-		padding-top: 15px;
-		&__title {
-			padding-bottom: 30px;
-			font-size: 27px;
-			span {
-				display: none;
-			}
-		}
-		.column-center {
-			padding-top: 10px;
-		}
-		.block {
-			padding: 5px;
-			&_two {
-				margin-top: 100px;
-			}
-			&_number {
-				width: 30px;
-				height: 30px;
-			}
-			&_text {
-				padding-top: 12px;
-				line-height: 16px;
-			}
-		}
-		.arrow_img {
-			width: 100px;
-			height: 50px;
-			&_one {
-				top: 26.6%;
-				left: 60.3%;
-			}
-			&_two {
-				justify-content: flex-start;
-				top: 38.5%;
-				left: -7%;
-			}
-			&_three {
-				top: 74%;
-				left: 66%;
-			}
-		}
-		.phone-img {
-			max-width: 340px;
-			max-height: 570px;
 		}
 	}
 	.privilege {
@@ -691,6 +694,9 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 		&__row {
 			padding: 25px 20px 35px 20px;
 		}
+		.slider-container {
+			width: 100%;
+		}
 	}
 	.FAQ {
 		padding-bottom: 40px;
@@ -710,37 +716,29 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 		}
 	}
 	.firstscreen {
-		.column {
-			&_content {
-				margin: 10px 10px 0 0;
-			}
-			&__title {
-				font-size: 35px;
-				line-height: 35px;
-				padding: 10px 0px 15px 0;
-			}
-			&__text {
-				font-size: 15px;
-				padding-bottom: 15px;
-			}
+		&__column {
+			padding-bottom: 0;
+		}
+		&__title {
+			padding: 10px 10px 10px 0;
+			font-size: 34px;
+			line-height: 36px;
+		}
+
+		&__text {
+			padding-bottom: 10px;
 		}
 		.form {
 			padding-bottom: 20px;
 			font-size: 15px;
+			z-index: 2;
 			&__button {
 				width: 150px;
 				height: 40px;
 				font-size: 15px;
 			}
 		}
-		.column_img {
-			// display: none;
-			img {
-				object-fit: cover;
-				object-position: 0%;
-			}
-		}
-	}
+}
 	.lesson {
 		padding: 20px 0 20px 0;
 		.button-wrapper {
@@ -758,62 +756,50 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 		padding-top: 15px;
 		&__title {
 			padding-bottom: 30px;
+			font-size: 27px;
 			span {
-				font-size: 25px;
-				line-height: 23px;
+				display: none;
 			}
 		}
-		.column-center {
-			padding-top: 10px;
-		}
-		.block {
-			display: flex;
-			padding: 5px;
-			max-width: 150px;
-			&_one {
-				margin: 0 auto;
-			}
-			&_two {
-				margin: 0 auto;
-				margin-top: 35px;
-			}
-			&_three {
-				margin: 0 auto;
-				margin-top: 70px;
-			}
-			&_number {
-				font-size: 10px;
-				width: 20px;
-				height: 20px;
-			}
-			&_text {
-				font-size: 15px;
-				padding-top: 5px;
-				line-height: 15px;
-			}
-		}
-		.arrow_img {
-			width: 50px;
-			height: 30px;
-			&_one {
-				top: 32.6%;
-				left: 73.3%;
-			}
-			&_two {
-				justify-content: flex-start;
-				top: 40.5%;
-				left: 0%;
-			}
-			&_three {
-				top: 76%;
-				left: 82%;
-			}
-		}
-		.phone-img {
-			max-width: 250px;
-			max-height: 370px;
+	&__row {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		padding: 10px 0;
+	}
+	.block {
+		position: relative;
+		padding: 10px;
+	}
+	.block__one {
+		height: 100%;
+		order: 1;
+	}
+	.block__three {
+		order: 4;
+		align-self: center;
+	}
+	.block__two {
+		margin-top: 15px;
+		order: 2;
+	}
+	.block__img{
+		order: 3;
+		position: relative;
+		display: flex;
+		transform: none;
+		left: 0;
+		padding-top: 20px;
+		width: 349px;
+		height: 659px;
+		img {
+			width: 100%;
+			height: 100%;
 		}
 	}
+	
+}
 	.privilege {
 		&__column {
 			margin: 0 15px;
@@ -917,31 +903,39 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 		&__row {
 			flex-flow: row-reverse;
 		}
-		.column {
-			&_content {
-				flex: 0 1 50%;
-				margin: 0 0 0 5px;
-			}
-			&__title {				
-				font-size: 28px;
-				line-height: 28px;
-				padding: 0px 0px 10px 0;
-			}
-			&__text {
-				font-size: 14px;
-				line-height: 14px;
-				padding-bottom: 15px;
-			}
-		}
-		.column_img {
+		&__column {
 			flex: 0 1 50%;
-		img{
-			object-position: 15%;
+			padding-bottom: 0;
+		}
+		&__title {
+			padding: 0px 0px 5px 0;
+			font-size: 28px;
+			line-height: 27px;
+		}
+		&__text {
+			font-size: 14px;
+			line-height: 14px;
+			padding-bottom: 10px;
+		}
+		&__img {
+			img {
+			left: -10px;
+			object-position: left;
 		}
 	}
-	}
+		.form {
+			padding-bottom: 20px;
+			font-size: 15px;
+			
+			&__button {
+				width: 150px;
+				height: 40px;
+				font-size: 15px;
+			}
+		}
+}
 	.lesson {
-		padding: 15px 0 15px 0;
+		padding: 25px 0;
 		.button-wrapper {
 			max-width: 290px;
 			flex-wrap: wrap;
@@ -955,66 +949,19 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 		}
 	}
 	.phone {
-		padding-top: 15px;
+		padding: 25px 0;
 		&__title {
-			padding-bottom: 30px;
-			font-size: 26px;
-			line-height: 28px;
-		}
-		.column-center {
-			padding-top: 5px;
-		}
-		.block {
-			padding: 3px;
-			&_two {
-				margin-top: 5px;
-			}
-			&_one {
-			}
-			&_three {
-				margin-top: 20px;
-			}
-			&_number {
-				font-size: 9px;
-				width: 18px;
-				height: 18px;
-			}
-			&_text {
-				font-size: 14px;
-				padding-top: 3px;
-				line-height: 10px;
-			}
-		}
-		.arrow_img {
-			width: 50px;
-			height: 11px;
-			&_one {
-				top: 27.6%;
-				left: 59.3%;
-			}
-			&_two {
-				justify-content: flex-start;
-				top: 40.5%;
-				left: -7%;
-			}
-			&_three {
-				top: 76%;
-				left: 59.3%;
-			}
-		}
-		.phone-img {
-			max-width: 140px;
-			max-height: 260px;
+			padding-bottom: 5px;
 		}
 	}
 	.privilege {
-		padding-top: 15px;
+		padding: 25px 0;
 		&__column {
 			margin: 0 15px;
 		}
 		&__title {
 			font-size: 26px;
-			padding-bottom: 15px;
+			padding-bottom: 0;
 		}
 		&__row {
 			padding: 0 0px 15px 0px;
@@ -1032,7 +979,7 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 		}
 	}
 	.checklist {
-		padding: 15px 0 15px 0;
+		padding: 25px 0;
 		&__title {
 			font-size: 26px;
 			line-height: 28px;
@@ -1050,7 +997,7 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 		}
 	}
 	.video {
-		padding: 15px 0 15px 0;
+		padding: 25px 0;
 		&__title {
 			padding: 0;
 			font-size: 26px;
@@ -1082,7 +1029,7 @@ box-shadow: 0px 0px 29px 1px rgba(0, 122, 92, 0.7);
 		}
 	}
 	.plan {
-		padding-top: 15px;
+		padding-top: 25px;
 		&__title {
 			font-size: 26px;
 			line-height: 28px;
