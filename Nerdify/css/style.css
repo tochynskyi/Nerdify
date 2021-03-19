@@ -62,6 +62,7 @@
 
 .footer {
   width: 100%;
+  background-color: #f1f1f1;
 }
 
 .footer__row {
@@ -947,7 +948,7 @@ body {
           box-shadow: 0px 2px 25px rgba(76, 106, 170, 0.22);
   border-radius: 20px;
   padding: 33px 15px 25px 15px;
-  margin: 15px 20px;
+  margin: 25px 20px;
 }
 
 .plan-block__title {
@@ -1485,8 +1486,7 @@ body {
   }
 
   .header__logo {
-    width: 70px;
-    height: 35px;
+    width: 80px;
   }
 
   .header .menu__list {
@@ -1680,7 +1680,7 @@ body {
   }
 
   .FAQ {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
   }
 
   .FAQ__title {
@@ -1694,7 +1694,7 @@ body {
   }
 
   .footer {
-    padding: 20px 0 15px 0;
+    padding: 0px 0 25px 0;
   }
 
   .footer__row {
