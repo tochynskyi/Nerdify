@@ -1359,8 +1359,11 @@ body {
             transform: none;
     left: 0;
     padding-top: 20px;
-    width: 349px;
-    height: 659px;
+    width: 360px;
+    height: 600px;
+    -webkit-transform: translate(7px, 0);
+        -ms-transform: translate(7px, 0);
+            transform: translate(7px, 0);
   }
 
   .phone .block__img img {
@@ -1694,7 +1697,7 @@ body {
   }
 
   .footer {
-    padding: 15px 0 30px 0;
+    padding: 20px 0 35px 0;
   }
 
   .footer__row {
@@ -1707,7 +1710,7 @@ body {
   }
 
   .footer .logo img {
-    top: 5%;
+    top: 0%;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
         -ms-transform: translate(-50%, 0);
